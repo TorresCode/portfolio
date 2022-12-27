@@ -5,21 +5,36 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="img/fv.png" type="image/x-icon">
+        <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
         
         <link rel="stylesheet" href="carrossel/carrossel.css">
         <title>TorresCode</title>
     </head>
     <body>
        <header>
-          
+           <h1><a id="logotipo" href="index.html">TorresCode/></a></h1>
+           <nav>
+               <a href="#" class="open">
+                <h1 class="open"><span>Menu</span> <img src="img/menubar.png" alt="" id="barra"></h1>
+               </a>
+               <ul class="menu">
+                   <li class="close">Fechar Menu</li>
+                   <li><a href="index.html">Home</a></li>
+                   <li><a href="#container_habilidades">Hablidades</a></li>
+                   <li><a href="#sobre_alfredo">Sobre</a></li>
+                   <li><a href="#contato">Contacto</a></li>
+               </ul>
+           </nav>
        </header>
        <section id="autor">
+           <cite>Pessoas viviam em fazendas, depois foram nas cidades. Agora todos nós vamos viver na Internet.
+            "Sean Parker"</cite>
+
        </section>
        
        <section id="sou_alfredo">
             
-        <p id="deve">Olá, sou Alfredo Torres Developer Full-Stack</p>
+        <p id="deve">Olá, sou Alfredo Torres Developer Full-Stack PHP</p>
         <p class="b">
             <a href="#main_home" class="btn">Meus Projetos &raquo;</a>
             <a href="#sobre_alfredo" class="btn">Leia Sobre Me &rarrlp;</a>
@@ -121,7 +136,9 @@
 
             <div class="legenda_works">
                 <p>Site Publicitario (Front-End & Responsivo)</p>
-                <h2>Saber Mais</h2>
+                <div class="acessar_site" style="display: flex; justify-content: space-around;">
+                    <h2><a href="http://torrescode.github.io/jc" target="_blank" rel="noopener noreferrer"> Acessar o Site</a></h2>
+                </div>
             </div>
         </section>
 
@@ -202,7 +219,9 @@
 
             <div class="legenda_works">
                 <p>Ecommerce (Full-Stack & Responsivo)</p>
-                <h2>Saber Mais</h2>
+                <div class="acessar_site" style="display: flex; justify-content: space-around;">
+                    <h2><a href="http://http://fredy.rf.gd/index.php" target="_blank" rel="noopener noreferrer"> Acessar o Site</a></h2>
+                </div>
             </div>
         </section>
 
@@ -324,7 +343,9 @@
 
                 <div class="legenda_works">
                     <p>Biblioteca Digital Escolar (Full-Stack & Responsivo)</p>
-                    <h2>Saber Mais</h2>
+                    <div class="acessar_site" style="display: flex; justify-content: space-around;">
+                        <h2 id="escrever"><a href="#" rel="noopener noreferrer">Em breve a <span style="font-family: Arial, Helvetica, sans-serif;">versão</span><span style="font-family: Arial, Helvetica, sans-serif;"> estará </span> hospedado.</a></h2>
+                    </div>
                 </div>
             </section>
        </main>
@@ -389,19 +410,29 @@
            
            <section id="container_footer" >
                 
-                <article class="fcolumn" style="width: 30%;">    
+                <article class="fcolumn" style="width: 100%;">    
                 
-                    <h2 class="fh2"><i class="fas fa-home"> Redes Socias</i></h2>
+                    <h2 class="fh2">Redes Socias</h2>
                     
-                    <ul style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                    <ul id="redeSocias" >
                         
                         <li class="flk">
-                            <a href="https://free.facebook.com/messages/read/?fbid=100028824420065&_rdr" target="_blank" rel="noopener noreferrer"><img src="img/fb.png" alt="" id="face">/Fredy Torres
+                            <a href="https://free.facebook.com/messages/read/?fbid=100028824420065&_rdr" target="_blank" rel="noopener noreferrer"><img src="img/fb.png" alt="" id="face">Fredy Torres
                             </a>
                         </li>
                         
                         <li class="flk">
-                            <a href="" target="_blank" ><img src="img/wt.png"  alt="" id="wts"> /935593163
+                            <a href="" target="_blank" ><img src="img/wt.png"  alt="" id="wts">935593163
+                            </a>
+                        </li>
+
+                        <li class="flk">
+                            <a href="" target="_blank" ><img src="img/in.svg"  alt="" id="linkedin">Alfredo Torres
+                            </a>
+                        </li>
+
+                        <li class="flk">
+                            <a href="" target="_blank" ><img src="img/github.svg"  alt=""  id="guithub">torrescode
                             </a>
                         </li>
 
@@ -427,7 +458,7 @@
 
                 <article class="fcolumn">
                     
-                    <p>
+                    <p id="copyright">
                         Copyright &copy; 2021 | 2022. Site desenvolvido por 
                         
                         <a id="fredy" href="https://free.facebook.com/fredh.perry.71?ref_component=mfreebasic_home_header&ref_page=%2Fwap%2Fhome.php&refid=7&ref=104" target="_blank" rel="noopener noreferrer" style="border: 1px solid #fff; padding: 0.2%;">Fredy Torres.
