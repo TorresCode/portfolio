@@ -311,7 +311,7 @@ main
     
     @keyframes escrever{
         from { width: 0; }
-        to { width: 24em; }
+        to { width: 25em; }
     }
     @keyframes cursor{
         from { border-right-color: black;}
