@@ -3,22 +3,36 @@
         font-family: geral;
         src: url(font/geral/Montserrat-Regular.ttf);
     }
+    @font-face {
+        font-family: fontlogo;
+        src: url(font/monocode/Monocode-Regular-V01.02b.ttf);
+    }
 
+title
+{
+    font-family: fontlogo;
+}
 *{ margin: 0; padding: 0; font-family: geral;}
 /*
 Menu Mobile
 */
 a > h1 > #barra{ width: 50%; box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); }
 h1 > img{ width: 100%; height: 50px; border-radius: 200px;}
-#logo{ width: 75%; height: 40px;}
+
 span{ color: blue; font-size: .6em;}
 
-.menu{ background-color: blueviolet; width: 100%; position: absolute; top: 0; right: 0; transform: translateX(100%); text-align: center; z-index: 1;}
+.menu{ width: 100%; position: absolute; top: 0; right: 0; transform: translateX(100%); text-align: center; z-index: 1;}
 .menu-open{ transform: translateX(0);}
-.menu > li{ background-color: rgb(17, 0, 255); padding: 5%; border-bottom: 1px solid #000; text-align: center; margin: auto; width: 90%;}
-.menu > li > a{ color: red; padding: 4% 40%; }
+.menu > li{ background-color: rgb(2, 0, 31); padding: 5%; border-bottom: 1px solid #000; text-align: center; margin: auto; width: 90%;}
+.menu > li > a{ color: rgb(255, 255, 255); font-family: fontlogo; }
+h1.open > span 
+{
+    font-family: fontlogo;
+}
+.close
+{font-family: fontlogo;}
 h1.open{ display: flex; justify-content: center; align-items: center;}
-.close{ background-color: red; font-weight: bold; font-size: 1.8em;}
+.close{ color: #fff; font-weight: bold; font-size: 1.8em;}
 
 
 @media screen and (min-width: 680px) 
@@ -45,8 +59,9 @@ h1.open{ display: flex; justify-content: center; align-items: center;}
     .menu > li > a 
     {
         text-align: center;
-        color: #fff;
+        color: #005;
         font-weight: bolder;
+        font-family: fontlogo;
         padding: 0;
     }
 
@@ -54,13 +69,14 @@ h1.open{ display: flex; justify-content: center; align-items: center;}
     {
         display: none;
     }
+
 }
 header
 { 
     display: flex; 
     justify-content: space-around; 
     align-items: center; 
-    background-color: rgb(33 137 207); 
+    background-color: #2189cf; 
     position: fixed; 
     width: 100%; 
     top: 0; 
@@ -71,7 +87,8 @@ header
 
     #logotipo 
     {
-        width: 100px;
+        font-family: fontlogo;
+        color: #005;
     }
 ul, a{ list-style: none; text-decoration: none;}
 
@@ -130,30 +147,6 @@ ul, a{ list-style: none; text-decoration: none;}
 
 }
     
-
-    /*#autor > figure
-    { 
-        align-self: center; 
-        width: 90%;
-    }
-
-        #autor > figure > img
-        { 
-            width: 100%; 
-            height: 500px; 
-            display: block; 
-            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-        }*/
-
-/*#dd 
-{
-    padding: 2%;
-    margin-top: -4%;
-    margin-bottom: -4%;
-    background-image: url(img/R.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}*/
     #deve{ text-align: center; margin-top: 2%; font-size: 1.4em;}
     p.b{ display: flex; justify-content: center; align-items: center; width: 70%; margin: auto;}
         .btn
@@ -235,13 +228,27 @@ main
                 padding-top: 25px;
             }
 
+.acessar_site
+{
+    margin-top: 2%;
+}
+.acessar_site > h2, .acessar_site > h2 > a
+{
+    font-family: fontlogo;
+    font-size: 1.2em;
+    color: rgb(0, 0, 150);
+}
+
+
+
+
+
+
+
+
+
 #container_habilidades
 {
-    /*background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-image: url(img/OIP\ \(1\).jpg);
-    background-repeat: no-repeat;*/
     margin-top: 10%;
 }
 
@@ -293,6 +300,23 @@ main
         {
             height: 100px;
         }
+
+    #escrever{
+        font-size: 0.8em;
+        white-space: nowrap;
+        border-right: 2px solid black;
+        overflow: hidden;
+        animation: cursor 600ms 1s infinite normal, escrever 10s 1s infinite normal both;
+    }
+    
+    @keyframes escrever{
+        from { width: 0; }
+        to { width: 21em; }
+    }
+    @keyframes cursor{
+        from { border-right-color: black;}
+        to { border-right-color: transparent;}
+    }
 
 
 
@@ -407,7 +431,7 @@ footer
         display: flex; 
         justify-content: center; 
         flex-wrap: wrap;
-        margin: 0 20%; 
+        /*margin: 0 20%;*/ 
         margin-bottom: 1%;
         margin: auto;
         width: 100%;
@@ -415,8 +439,8 @@ footer
 
         #container_footer > article
         {
-            flex: 0 1 200px;
-            margin: 10%;
+            flex: 0 1 300px;
+            margin: 1%;
         }
 
         @media screen and (min-width: 690px) 
@@ -431,15 +455,66 @@ footer
     
     footer > article.fcolumn > ul > li{ margin: 1% 0;}
     
-    #face{ width: 50%; height: auto;}
+    #redeSocias
+    {
+        display: flex; 
+        justify-content: center;
+        flex-wrap: wrap; 
+        align-items: center; 
+    }
+
+    @media screen and (min-width: 600px) 
+    {
     
-    #wts{ width: 60%; height: 60%;}
+        #redeSocias
+        {
+            flex-wrap: nowrap;
+        }
+    }
+    #redeSocias > li 
+    {
+        align-self: flex-start;
+        margin: 5%;
+    
+    }
+
+    #redeSocias > .flk > a
+    {
+        font-size: 0.8em;
+    }
+    #face{ width: 40px; height: auto;}
+    
+    #wts{ width: 40px; height: 40px;}
     
     .phone{ width: 15%; height: 15%; border: 1px solid white; border-radius: 500px; background-color: #fff; }
+    #linkedin
+    {
+        width: 35px;
+        height: 35px;
+    }
+    #guithub 
+    {
+        background-color: #fff;
+        border-radius: 5px;
+        width: 35px;
+        height: 35px;
+    }
+    #face, #wts, #linkedin, #guithub, .phone{ display: block; margin: auto;}
     
-    #face, #wts, .phone{ display: block; margin: auto;}
-
     .flk > a, #fredy 
     {
         color: #fff;
+    }   
+
+    #copyright 
+    {
+        padding: 5% 1% 2%;
+    }
+
+    @media screen and (min-width: 600px) 
+    {
+        #copyright
+        {
+            padding: 0;
+        }    
     }
